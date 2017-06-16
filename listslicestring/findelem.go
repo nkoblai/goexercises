@@ -13,11 +13,9 @@ var list = []int{
 
 // FindElement checks whether an element occurs in a list.
 func FindElement(list []int, element int) bool {
-	for i := 0; i < len(list); i++ {
-		for _, v := range list {
-			if v == element {
-				return true
-			}
+	for _, v := range list {
+		if v == element {
+			return true
 		}
 	}
 	return false
