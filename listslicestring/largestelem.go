@@ -13,12 +13,10 @@ var list = []int{
 
 // LargestElement finding largest element in list and returns it.
 func LargestElement(list []int) int {
-	maxVal := 0
-	for i := 0; i < len(list); i++ {
-		for _, v := range list {
-			if list[i] >= v {
-				maxVal = list[i]
-			}
+	maxVal := list[len(list)-1]
+	for _, v := range list {
+		if v >= maxVal {
+			maxVal = v
 		}
 	}
 	return maxVal
