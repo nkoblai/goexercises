@@ -1,8 +1,6 @@
-package main
+package sum
 
-import (
-	"fmt"
-)
+import "fmt"
 
 var list = []int{
 	48, 96, 86, 68,
@@ -22,9 +20,10 @@ func SumFor(list []int) int {
 
 // SumWhile computes the sum using while-loop.
 func SumWhile(list []int) int {
-	res := 0
-	for i := 0; i < len(list); i++ {
+	res, i := 0, 0
+	for i != len(list) {
 		res += list[i]
+		i++
 	}
 	return res
 }
